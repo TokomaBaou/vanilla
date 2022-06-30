@@ -15,5 +15,6 @@ export const top = () => {
 
   const human = new Human();
   console.log(human.age); // 18
-  console.log(Human1);
+  const human1 = new Human1();
+  console.log(human1.age);
 };

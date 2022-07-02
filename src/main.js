@@ -18,3 +18,10 @@ export const top = () => {
   const human1 = new Human1();
   console.log(human1.age);
 };
+
+await new Promise((resolve) => {
+  setTimeout(() => {
+    alert("1秒経ちました");
+    resolve();
+  }, 1000);
+});

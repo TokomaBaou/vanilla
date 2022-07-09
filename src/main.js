@@ -44,3 +44,14 @@ await new Promise((resolve) => {
     resolve();
   }, 1000);
 });
+
+//instanceofよりも安全にインスタンスかどうかの確認ができる、プライベートフィールドのin演算子
+class MyClass2 {
+  #brand
+  static isMyClass(object) {
+    return #brand in object;
+  }
+}
+
+console.log(MyClass2.isMyClass(new MyClass())); // true
+console.log(MyClass2.isMyClass(new Date())); // false

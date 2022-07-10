@@ -55,3 +55,11 @@ class MyClass2 {
 
 console.log(MyClass2.isMyClass(new MyClass())); // true
 console.log(MyClass2.isMyClass(new Date())); // false
+
+const myInstance = new MyClass2();
+console.log(MyClass.isMyClass(myInstance)); // true
+
+const foo = {
+  name: "名探偵コナン"
+};
+console.log(MyClass.isMyClass(foo)); // false

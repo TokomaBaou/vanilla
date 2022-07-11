@@ -56,6 +56,7 @@ class MyClass2 {
 console.log(MyClass2.isMyClass(new MyClass())); // true
 console.log(MyClass2.isMyClass(new Date())); // false
 
+//inを使えば、わざわざ try・catchを使わず、シンプルにインスタンスかどうかのチェックができます。
 const myInstance = new MyClass2();
 console.log(MyClass.isMyClass(myInstance)); // true
 
@@ -63,3 +64,12 @@ const foo = {
   name: "名探偵コナン"
 };
 console.log(MyClass.isMyClass(foo)); // false
+
+//syncなしでもawaitが使えるようになる、トップレベルでのawait
+await new Promise((resolve) => {
+  setTimeout(() => {
+    alert("1秒経ちました");
+    resolve();
+  }, 1000);
+});
+

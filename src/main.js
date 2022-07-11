@@ -73,3 +73,6 @@ await new Promise((resolve) => {
   }, 1000);
 });
 
+//配列の「最後の要素」が簡単に取得できるようになるat()
+const myArray = ["りんご", "バナナ", "ぶどう"];
+console.log(myArray.at(-1)); // ぶどう

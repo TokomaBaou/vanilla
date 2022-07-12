@@ -96,4 +96,11 @@ class MyClass3 {
 
 console.log(MyClass3.x); // こんにちは
 
+//複数のエラーをチェインし、原因を追跡しやすくできるError.cause
+
+try {
+  // なにかしらのエラーが発生する
+} catch(error) {
+  throw new Error("エラーの内容", { cause: error })
+}
 

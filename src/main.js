@@ -104,3 +104,6 @@ try {
   throw new Error("エラーの内容", { cause: error })
 }
 
+//正規表現で、マッチ部分の開始・終了インデックスを取得できるdフラグ
+const result = /正規表現/d.exec(文字列);
+console.log(result.indices);

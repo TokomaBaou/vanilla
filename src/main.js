@@ -76,3 +76,24 @@ await new Promise((resolve) => {
 //配列の「最後の要素」が簡単に取得できるようになるat()
 const myArray = ["りんご", "バナナ", "ぶどう"];
 console.log(myArray.at(-1)); // ぶどう
+
+//オブジェクトが指定のプロパティを持っているかを簡単にチェックできる Object.hasOwn()
+const myObject = {
+  name: "鈴木",
+}
+
+console.log(Object.hasOwn(myObject, "name"));
+// true
+
+//JavaScriptで「staticイニシャライザー」ができるように
+class MyClass3 {
+  static x;
+  
+  static {
+    this.x = "こんにちは"
+  }
+}
+
+console.log(MyClass3.x); // こんにちは
+
+
